@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
+//http://stackoverflow.com/questions/20906548/why-is-synchronized-block-better-than-synchronized-method
 public class Worker {
 
 	private Random random = new Random();
@@ -26,7 +27,8 @@ public class Worker {
 	}
 
 	/*
-	 * public void stageOne() { synchronized (lock1) { try { Thread.sleep(1); }
+	 * public void stageOne() { 
+	 * synchronized (lock1) { try { Thread.sleep(1); }
 	 * catch (InterruptedException e) {
 	 * 
 	 * e.printStackTrace(); } list1.add(random.nextInt(10)); } }
@@ -47,7 +49,9 @@ public class Worker {
 	/*
 	 * public void stageTwo() {
 	 * 
-	 * synchronized (lock2) { try { Thread.sleep(1); } catch
+	 * synchronized (lock2) {
+	 *  try { Thread.sleep(1); } 
+	 *  catch
 	 * (InterruptedException e) {
 	 * 
 	 * e.printStackTrace(); } list2.add(random.nextInt(10)); } }
