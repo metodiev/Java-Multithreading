@@ -1,50 +1,35 @@
 ## 1. Thread Lifecycle States in Java
 Java threads go through six main states, represented by Thread.State:
-
 NEW → Thread is created but not yet started (new Thread(runnable)).
-
 RUNNABLE → Thread is ready to run, waiting for CPU scheduling.
-
 RUNNING → Thread is actively executing (a sub-state of RUNNABLE in practice).
-
 WAITING → Thread is waiting indefinitely for another thread’s signal (e.g., Object.wait() without timeout).
-
 TIMED_WAITING → Thread is waiting for a bounded time (e.g., sleep(ms), join(ms), wait(ms)).
-
 BLOCKED → Thread is waiting to acquire a monitor lock (synchronized block).
-
 TERMINATED → Thread has finished execution.
 
 
 ## 2. Transitions Between States
 
 NEW → RUNNABLE: call start().
-
 RUNNABLE ↔ RUNNING: controlled by thread scheduler.
-
 RUNNING → WAITING/TIMED_WAITING: calling wait(), join(), or sleep().
-
 RUNNING → BLOCKED: thread tries to enter a synchronized block but lock is held.
-
 WAITING/TIMED_WAITING/BLOCKED → RUNNABLE: lock acquired or signal/timeout.
-
 RUNNING → TERMINATED: run() method finishes.
 
 ## 3. Key Leadership/Architect Insight
 
 Performance impact: Too many threads in BLOCKED → lock contention.
-
 Deadlocks: Multiple threads permanently stuck in BLOCKED or WAITING.
-
 Scalability: Excessive threads stuck in TIMED_WAITING (due to poor thread pool config).
-
 Monitoring: Use jstack, VisualVM, or async profilers to inspect states.
 
 ## Diagram
 
 ![Diagram](images/lifecycle%20of%20a%20Java%20thread.svg)
 
-
+## Code Example
 ```bash
 stateDiagram-v2
     [*] --> NEW
@@ -81,6 +66,5 @@ public class ThreadLifecycleDemo {
         System.out.println("State after termination: " + t.getState()); // TERMINATED
     }
 }
-
 
 ```
