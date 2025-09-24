@@ -13,10 +13,15 @@ TERMINATED → Thread has finished execution.
 ## 2. Transitions Between States
 
 NEW → RUNNABLE: call start().
+
 RUNNABLE ↔ RUNNING: controlled by thread scheduler.
+
 RUNNING → WAITING/TIMED_WAITING: calling wait(), join(), or sleep().
+
 RUNNING → BLOCKED: thread tries to enter a synchronized block but lock is held.
+
 WAITING/TIMED_WAITING/BLOCKED → RUNNABLE: lock acquired or signal/timeout.
+
 RUNNING → TERMINATED: run() method finishes.
 
 ## 3. Key Leadership/Architect Insight
