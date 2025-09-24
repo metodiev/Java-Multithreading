@@ -42,6 +42,7 @@ Monitoring: Use jstack, VisualVM, or async profilers to inspect states.
 
 ## Diagram
 
+![Diagram](images/lifecycle%20of%20a%20Java%20thread.svg)
 
 
 ```bash
