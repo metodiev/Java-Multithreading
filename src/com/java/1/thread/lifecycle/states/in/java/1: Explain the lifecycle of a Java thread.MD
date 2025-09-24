@@ -2,11 +2,17 @@
 Java threads go through six main states, represented by Thread.State:
 
 NEW → Thread is created but not yet started (new Thread(runnable)).
+
 RUNNABLE → Thread is ready to run, waiting for CPU scheduling.
+
 RUNNING → Thread is actively executing (a sub-state of RUNNABLE in practice).
+
 WAITING → Thread is waiting indefinitely for another thread’s signal (e.g., Object.wait() without timeout).
+
 TIMED_WAITING → Thread is waiting for a bounded time (e.g., sleep(ms), join(ms), wait(ms)).
+
 BLOCKED → Thread is waiting to acquire a monitor lock (synchronized block).
+
 TERMINATED → Thread has finished execution.
 
 
