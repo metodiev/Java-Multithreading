@@ -42,7 +42,6 @@ The prompts are categorized to cover **fundamentals, advanced concepts, real-wor
 - Countdown latches, cyclic barriers, phasers  
 - Rate limiters and scheduled tasks  
 
----
 
 ### 5. Atomic Operations & Lock-Free (20 prompts)
 - CAS (Compare-And-Swap) mechanics  
