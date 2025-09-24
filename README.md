@@ -1,4 +1,4 @@
-# Java Multithreading – 200 Prompts for Architects & Technical Leads
+# Java Multithreading for Architects and Technical Leads
 
 This repository contains a comprehensive set of **200 prompts/questions** designed for mastering **Java Multithreading** at the **Architect / Technical Lead** level.  
 The prompts are categorized to cover **fundamentals, advanced concepts, real-world scenarios, and leadership responsibilities**.
@@ -7,7 +7,7 @@ The prompts are categorized to cover **fundamentals, advanced concepts, real-wor
 
 ##  Category Breakdown
 
-### 1. Thread Fundamentals (20 prompts)
+### 1. Thread Fundamentals 
 - Thread lifecycle, states, priorities  
 - Daemon vs. user threads  
 - Thread groups  
@@ -16,7 +16,7 @@ The prompts are categorized to cover **fundamentals, advanced concepts, real-wor
 
 
 
-### 2. Synchronization & Locks (20 prompts)
+### 2. Synchronization and Locks 
 - synchronized keyword and monitor internals  
 - Intrinsic locks vs. explicit locks  
 - ReentrantLock and fairness policies  
@@ -25,7 +25,7 @@ The prompts are categorized to cover **fundamentals, advanced concepts, real-wor
 
 
 
-### 3. Java Memory Model (20 prompts)
+### 3. Java Memory Model 
 - Happens-before relationships  
 - volatile keyword semantics  
 - Atomicity, visibility, ordering guarantees  
@@ -34,7 +34,7 @@ The prompts are categorized to cover **fundamentals, advanced concepts, real-wor
 
 
 
-### 4. Concurrency Utilities (30 prompts)
+### 4. Concurrency Utilities 
 - ExecutorService, thread pools  
 - Work stealing and ForkJoinPool  
 - CompletableFuture for async workflows  
@@ -43,7 +43,7 @@ The prompts are categorized to cover **fundamentals, advanced concepts, real-wor
 - Rate limiters and scheduled tasks  
 
 
-### 5. Atomic Operations & Lock-Free (20 prompts)
+### 5. Atomic Operations and Lock-Free 
 - CAS (Compare-And-Swap) mechanics  
 - AtomicInteger, AtomicReference, AtomicStampedReference  
 - LongAdder, DoubleAdder for high-concurrency counters  
@@ -53,7 +53,7 @@ The prompts are categorized to cover **fundamentals, advanced concepts, real-wor
 
 
 
-### 6. Concurrent Collections (15 prompts)
+### 6. Concurrent Collections 
 - ConcurrentHashMap internals and segmenting  
 - CopyOnWriteArrayList and when to use it  
 - Concurrent skip list maps and sets  
@@ -62,7 +62,7 @@ The prompts are categorized to cover **fundamentals, advanced concepts, real-wor
 
 
 
-### 7. Concurrency Patterns (20 prompts)
+### 7. Concurrency Patterns 
 - Producer-Consumer  
 - Reader-Writer  
 - Fork/Join divide-and-conquer  
@@ -72,7 +72,7 @@ The prompts are categorized to cover **fundamentals, advanced concepts, real-wor
 - Reactive streams  
 
 
-### 8. Performance & Debugging (15 prompts)
+### 8. Performance and Debugging 
 - Deadlock detection and prevention strategies  
 - Contention analysis and thread profiling  
 - Thread dumps and analyzing blocked threads  
@@ -82,7 +82,7 @@ The prompts are categorized to cover **fundamentals, advanced concepts, real-wor
 
 
 
-### 9. Reactive & Modern Approaches (10 prompts)
+### 9. Reactive and Modern Approaches 
 - Parallel streams vs. manual multithreading  
 - Reactive programming (Reactor, RxJava)  
 - Async IO vs. thread-per-request  
@@ -90,7 +90,7 @@ The prompts are categorized to cover **fundamentals, advanced concepts, real-wor
 - Structured concurrency concepts  
 
 
-### 10. System Design Scenarios (20 prompts)
+### 10. System Design Scenarios 
 - Architecting high-throughput data pipelines  
 - Thread-per-request vs. async event loop models  
 - Batch processing vs. streaming with concurrency  
@@ -99,7 +99,7 @@ The prompts are categorized to cover **fundamentals, advanced concepts, real-wor
 - Distributed locking strategies (e.g., Zookeeper, Redis)  
 
 
-### 11. Leadership & Review Skills (10 prompts)
+### 11. Leadership and Review Skills 
 - Code review practices for concurrency bugs  
 - Concurrency checklist for teams  
 - Teaching concurrency to junior developers  
