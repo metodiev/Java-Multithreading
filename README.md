@@ -1,7 +1,7 @@
 # Java Multithreading for Architects and Technical Leads
 
-This repository contains a comprehensive set of **200 prompts/questions** designed for mastering **Java Multithreading** at the **Architect / Technical Lead** level.  
-The prompts are categorized to cover **fundamentals, advanced concepts, real-world scenarios, and leadership responsibilities**.
+This repository contains a comprehensive set of questions designed for mastering **Java Multithreading** at the **Architect / Technical Lead** level.  
+The sections are categorized to cover **fundamentals, advanced concepts, real-world scenarios, and leadership responsibilities**.
 
 
 
