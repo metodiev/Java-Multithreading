@@ -28,7 +28,7 @@
 
 ## Diagram
 
-![Diagram](images/1.lifecycle%20of%20a%20Java%20thread.svg)
+![Diagram](images/1.lifecycle of a Java thread.svg)
 
 ## Code Example
 ```bash
