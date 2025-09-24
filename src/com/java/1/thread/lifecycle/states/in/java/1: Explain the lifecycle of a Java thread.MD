@@ -33,8 +33,11 @@ RUNNING → TERMINATED: run() method finishes.
 ## 3. Key Leadership/Architect Insight
 
 Performance impact: Too many threads in BLOCKED → lock contention.
+
 Deadlocks: Multiple threads permanently stuck in BLOCKED or WAITING.
+
 Scalability: Excessive threads stuck in TIMED_WAITING (due to poor thread pool config).
+
 Monitoring: Use jstack, VisualVM, or async profilers to inspect states.
 
 ## Diagram
