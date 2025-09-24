@@ -5,8 +5,6 @@ The sections are categorized to cover **fundamentals, advanced concepts, real-wo
 
 
 
-##  Category Breakdown
-
 ### 1. Thread Fundamentals 
 - Thread lifecycle, states, priorities  
 - Daemon vs. user threads  
