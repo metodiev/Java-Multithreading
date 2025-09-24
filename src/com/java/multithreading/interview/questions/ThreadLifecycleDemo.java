@@ -1,3 +1,5 @@
+package com.java.multithreading.interview.questions;
+
 public class ThreadLifecycleDemo {
     public static void main(String[] args) throws InterruptedException {
         Thread t = new Thread(() -> {

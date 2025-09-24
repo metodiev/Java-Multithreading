@@ -28,7 +28,7 @@
 
 ## Diagram
 
-![Diagram](images/lifecycle%20of%20a%20Java%20thread.svg)
+![Diagram](images/1.lifecycle%20of%20a%20Java%20thread.svg)
 
 ## Code Example
 ```bash
@@ -49,7 +49,7 @@ stateDiagram-v2
 ```
 
 ```java
-public class ThreadLifecycleDemo {
+public class com.java.multithreading.interview.questions.ThreadLifecycleDemo {
     public static void main(String[] args) throws InterruptedException {
         Thread t = new Thread(() -> {
             try {
