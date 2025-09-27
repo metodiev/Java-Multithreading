@@ -96,7 +96,7 @@ The sections are categorized to cover **fundamentals, advanced concepts, real-wo
 80. How do you schedule tasks with ScheduledExecutorService?  
 
 
-## 5. Atomic Operations and Lock-Free (81–100)
+## 5. Atomic Operations and Lock-Free
 81. What is CAS (Compare-And-Swap)?  
 82. How does CAS help avoid locks?  
 83. What is AtomicInteger used for?  
@@ -119,7 +119,7 @@ The sections are categorized to cover **fundamentals, advanced concepts, real-wo
 100. How can lock-free structures improve throughput?  
 
 
-## 6. Concurrent Collections (101–120)
+## 6. Concurrent Collections 
 101. How does ConcurrentHashMap work internally?  
 102. What is bucket segmentation in ConcurrentHashMap?  
 103. How did ConcurrentHashMap change after Java 8?  
