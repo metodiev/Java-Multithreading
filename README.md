@@ -15,103 +15,103 @@ The sections are categorized to cover **fundamentals, advanced concepts, real-wo
 8. What happens if all user threads finish but daemon threads remain?  
 9. What are thread groups in Java?  
 10. Are thread groups recommended for modern applications?  
-11. How do you create a thread using the `Thread` class?  
-12. How do you create a thread using `Runnable`?  
-13. How do you create a thread using `Callable` and `Future`?  
-14. What are the pros/cons of implementing `Runnable` vs extending `Thread`?  
+11. How do you create a thread using the Thread class?  
+12. How do you create a thread using Runnable?  
+13. How do you create a thread using Callable and Future?  
+14. What are the pros/cons of implementing Runnable vs extending Thread?  
 15. How do you stop a thread safely?  
-16. Why is `Thread.stop()` deprecated?  
+16. Why is Thread.stop() deprecated?  
 17. How do you interrupt a running thread?  
-18. How should code handle `InterruptedException`?  
+18. How should code handle InterruptedException?  
 19. What is cooperative thread termination?  
 20. What are best practices for handling thread lifecycle?  
 
 
 ## 2. Synchronization and Locks
-21. How does the `synchronized` keyword work internally?  
+21. How does the synchronized keyword work internally?  
 22. What is a monitor in Java concurrency?  
 23. What are intrinsic locks in Java?  
 24. How are intrinsic locks different from explicit locks?  
 25. What is a reentrant lock?  
-26. How does fairness policy affect `ReentrantLock`?  
-27. How do you use `tryLock()` with timeouts?  
-28. What is the purpose of `ReadWriteLock`?  
-29. How does `ReentrantReadWriteLock` improve concurrency?  
-30. What is `StampedLock` and how does it differ from `ReentrantLock`?  
-31. What is optimistic locking in `StampedLock`?  
+26. How does fairness policy affect ReentrantLock?  
+27. How do you use tryLock() with timeouts?  
+28. What is the purpose of ReadWriteLock?  
+29. How does ReentrantReadWriteLock improve concurrency?  
+30. What is StampedLock and how does it differ from ReentrantLock?  
+31. What is optimistic locking in StampedLock?  
 32. How do condition variables work in Java?  
-33. How do you use `await()` and `signal()` with conditions?  
+33. How do you use await() and signal() with conditions?  
 34. What is spurious wakeup?  
 35. Why is it important to check conditions in a loop when waiting?  
-36. What is the difference between `wait()` and `sleep()`?  
-37. How does `notify()` differ from `notifyAll()`?  
-38. What happens if `notify()` is called with no waiting threads?  
+36. What is the difference between wait() and sleep()?  
+37. How does notify() differ from notifyAll()?  
+38. What happens if notify() is called with no waiting threads?  
 39. What are lock contention and its effects?  
 40. When should you prefer locks over synchronized blocks?  
 
 
 ## 3. Java Memory Model
 41. What is the happens-before relationship?  
-42. How does `synchronized` establish happens-before?  
-43. How does `volatile` establish happens-before?  
-44. How does `Thread.start()` establish happens-before?  
-45. How does `Thread.join()` establish happens-before?  
-46. What guarantees does `volatile` provide?  
-47. Why is `volatile` insufficient for atomic increments?  
-48. How does `volatile` prevent instruction reordering?  
+42. How does synchronized establish happens-before?  
+43. How does volatile establish happens-before?  
+44. How does Thread.start() establish happens-before?  
+45. How does Thread.join() establish happens-before?  
+46. What guarantees does volatile provide?  
+47. Why is volatile insufficient for atomic increments?  
+48. How does volatile prevent instruction reordering?  
 49. What is safe publication of objects?  
 50. What is the out-of-thin-air value problem?  
 51. Which operations are atomic in Java?  
-52. Why were `long` and `double` not atomic pre-Java 5?  
+52. Why were long and double not atomic pre-Java 5?  
 53. What’s the difference between atomicity, visibility, and ordering?  
 54. How does synchronization guarantee visibility?  
 55. What is instruction reordering?  
 56. How do memory fences prevent reordering?  
 57. How does the JVM insert memory fences implicitly?  
-58. Why is double-checked locking broken without `volatile`?  
-59. How are `final` fields treated specially by the JMM?  
+58. Why is double-checked locking broken without volatile?  
+59. How are final fields treated specially by the JMM?  
 60. Why are final fields “safe to publish”?  
 
 
 ## 4. Concurrency Utilities
-61. What is `ExecutorService` in Java?  
+61. What is ExecutorService in Java?  
 62. How do you create a fixed thread pool?  
 63. What is a cached thread pool?  
 64. What is a single-threaded executor?  
 65. What is the advantage of using thread pools?  
 66. What is a work-stealing pool?  
-67. How does `ForkJoinPool` differ from normal executors?  
+67. How does ForkJoinPool differ from normal executors?  
 68. What is the fork/join framework best suited for?  
-69. What is a `CompletableFuture`?  
-70. How does `CompletableFuture` differ from `Future`?  
-71. How do you chain async tasks with `CompletableFuture`?  
+69. What is a CompletableFuture?  
+70. How does CompletableFuture differ from Future?  
+71. How do you chain async tasks with CompletableFuture?  
 72. What are blocking queues in Java concurrency?  
-73. When to use `ArrayBlockingQueue` vs `LinkedBlockingQueue`?  
-74. What is a `PriorityBlockingQueue`?  
-75. How does `SynchronousQueue` work?  
-76. What is a `DelayQueue` used for?  
-77. How does `CountDownLatch` work?  
-78. How does `CyclicBarrier` differ from `CountDownLatch`?  
+73. When to use ArrayBlockingQueue vs LinkedBlockingQueue?  
+74. What is a PriorityBlockingQueue?  
+75. How does SynchronousQueue work?  
+76. What is a DelayQueue used for?  
+77. How does CountDownLatch work?  
+78. How does CyclicBarrier differ from CountDownLatch?  
 79. What is a Phaser?  
-80. How do you schedule tasks with `ScheduledExecutorService`?  
+80. How do you schedule tasks with ScheduledExecutorService?  
 
 
 ## 5. Atomic Operations and Lock-Free (81–100)
 81. What is CAS (Compare-And-Swap)?  
 82. How does CAS help avoid locks?  
-83. What is `AtomicInteger` used for?  
-84. What is `AtomicLong`?  
-85. What is `AtomicReference`?  
-86. How does `AtomicStampedReference` solve the ABA problem?  
-87. What is `AtomicMarkableReference`?  
-88. When to use `LongAdder` vs `AtomicLong`?  
-89. What is `DoubleAdder` used for?  
+83. What is AtomicInteger used for?  
+84. What is AtomicLong?  
+85. What is AtomicReference?  
+86. How does AtomicStampedReference solve the ABA problem?  
+87. What is AtomicMarkableReference?  
+88. When to use LongAdder vs AtomicLong?  
+89. What is DoubleAdder used for?  
 90. How do lock-free queues work internally?  
 91. What is a lock-free stack?  
 92. What is the ABA problem in concurrency?  
 93. How do you solve the ABA problem?  
 94. What are VarHandles?  
-95. How do VarHandles replace `sun.misc.Unsafe`?  
+95. How do VarHandles replace sun.misc.Unsafe?  
 96. What are the benefits of lock-free programming?  
 97. What are the risks of lock-free programming?  
 98. How does CAS interact with memory fences?  
@@ -120,24 +120,24 @@ The sections are categorized to cover **fundamentals, advanced concepts, real-wo
 
 
 ## 6. Concurrent Collections (101–120)
-101. How does `ConcurrentHashMap` work internally?  
+101. How does ConcurrentHashMap work internally?  
 102. What is bucket segmentation in ConcurrentHashMap?  
 103. How did ConcurrentHashMap change after Java 8?  
 104. What is the performance advantage of ConcurrentHashMap?  
-105. How does `CopyOnWriteArrayList` work?  
+105. How does CopyOnWriteArrayList work?  
 106. When should you use CopyOnWriteArrayList?  
 107. What are the trade-offs of CopyOnWrite collections?  
-108. How does `ConcurrentSkipListMap` work?  
-109. What is a `ConcurrentSkipListSet`?  
+108. How does ConcurrentSkipListMap work?  
+109. What is a ConcurrentSkipListSet?  
 110. What does “weakly consistent iterator” mean?  
 111. How are weakly consistent iterators different from fail-fast ones?  
 112. What is the difference between synchronized collections and concurrent collections?  
 113. When to prefer synchronized collections?  
 114. What happens when multiple threads modify ConcurrentHashMap?  
 115. How do concurrent collections ensure thread safety?  
-116. What is `ConcurrentLinkedQueue`?  
-117. How does `ConcurrentLinkedDeque` differ?  
-118. How does `LinkedBlockingDeque` work?  
+116. What is ConcurrentLinkedQueue?  
+117. How does ConcurrentLinkedDeque differ?  
+118. How does LinkedBlockingDeque work?  
 119. How do concurrent navigable maps work?  
 120. What are the use cases for concurrent collections?  
 
