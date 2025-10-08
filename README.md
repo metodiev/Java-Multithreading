@@ -1,3 +1,11 @@
+<!-- ====== Badges (centered) ====== -->
+<p align="center">
+  <!-- Example badges using Shields.io -->
+  <img src="https://img.shields.io/badge/Java_Multithreading-ED8B00?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java Multithreading" />
+  <img src="https://img.shields.io/badge/Architects-1E90FF?style=for-the-badge&logo=apachearchitects&logoColor=white" alt="Architects" />
+  <img src="https://img.shields.io/badge/Technical_Leads-4CAF50?style=for-the-badge&logo=leader&logoColor=white" alt="Technical Leads" />
+</p>
+
 # Java Multithreading for Architects and Technical Leads
 
 This repository contains a comprehensive set of questions designed for mastering **Java Multithreading** at the **Architect / Technical Lead** level.  
