@@ -13,21 +13,21 @@ The sections are categorized to cover **fundamentals, advanced concepts, real-wo
 
 ## Complete tutorial guides
 
-All **200 questions** have corresponding answers in the tutorials. Start with the [master index](questions/00-INDEX.md); Sections 2–11 include detailed numbered answers, practical guidance, and Mermaid diagrams.
+All **200 questions** have an individual tutorial, grouped by section, plus a complete section guide with practical guidance and Mermaid diagrams. Start with the [master index](questions/00-INDEX.md).
 
 | Section | Tutorial |
 | --- | --- |
-| 1. Thread Fundamentals | [20 individual tutorials](questions/1.%20Thread%20Fundamentals/) |
-| 2. Synchronization and Locks | [Complete guide](questions/2.%20Synchronization%20and%20Locks/README.md) |
-| 3. Java Memory Model | [Complete guide](questions/3.%20Java%20Memory%20Model/README.md) |
-| 4. Concurrency Utilities | [Complete guide](questions/4.%20Concurrency%20Utilities/README.md) |
-| 5. Atomic Operations and Lock-Free | [Complete guide](questions/5.%20Atomic%20Operations%20and%20Lock-Free/README.md) |
-| 6. Concurrent Collections | [Complete guide](questions/6.%20Concurrent%20Collections/README.md) |
-| 7. Concurrency Patterns | [Complete guide](questions/7.%20Concurrency%20Patterns/README.md) |
-| 8. Performance and Debugging | [Complete guide](questions/8.%20Performance%20and%20Debugging/README.md) |
-| 9. Reactive and Modern Approaches | [Complete guide](questions/9.%20Reactive%20and%20Modern%20Approaches/README.md) |
-| 10. System Design Scenarios | [Complete guide](questions/10.%20System%20Design%20Scenarios/README.md) |
-| 11. Leadership and Review Skills | [Complete guide](questions/11.%20Leadership%20and%20Review%20Skills/README.md) |
+| 1. Thread Fundamentals | [Tutorials](questions/1.%20Thread%20Fundamentals/) |
+| 2. Synchronization and Locks | [Section guide](questions/2.%20Synchronization%20and%20Locks/README.md) · [Tutorials](questions/2.%20Synchronization%20and%20Locks/) |
+| 3. Java Memory Model | [Section guide](questions/3.%20Java%20Memory%20Model/README.md) · [Tutorials](questions/3.%20Java%20Memory%20Model/) |
+| 4. Concurrency Utilities | [Section guide](questions/4.%20Concurrency%20Utilities/README.md) · [Tutorials](questions/4.%20Concurrency%20Utilities/) |
+| 5. Atomic Operations and Lock-Free | [Section guide](questions/5.%20Atomic%20Operations%20and%20Lock-Free/README.md) · [Tutorials](questions/5.%20Atomic%20Operations%20and%20Lock-Free/) |
+| 6. Concurrent Collections | [Section guide](questions/6.%20Concurrent%20Collections/README.md) · [Tutorials](questions/6.%20Concurrent%20Collections/) |
+| 7. Concurrency Patterns | [Section guide](questions/7.%20Concurrency%20Patterns/README.md) · [Tutorials](questions/7.%20Concurrency%20Patterns/) |
+| 8. Performance and Debugging | [Section guide](questions/8.%20Performance%20and%20Debugging/README.md) · [Tutorials](questions/8.%20Performance%20and%20Debugging/) |
+| 9. Reactive and Modern Approaches | [Section guide](questions/9.%20Reactive%20and%20Modern%20Approaches/README.md) · [Tutorials](questions/9.%20Reactive%20and%20Modern%20Approaches/) |
+| 10. System Design Scenarios | [Section guide](questions/10.%20System%20Design%20Scenarios/README.md) · [Tutorials](questions/10.%20System%20Design%20Scenarios/) |
+| 11. Leadership and Review Skills | [Section guide](questions/11.%20Leadership%20and%20Review%20Skills/README.md) · [Tutorials](questions/11.%20Leadership%20and%20Review%20Skills/) |
 
 
 ## 1. Thread Fundamentals 

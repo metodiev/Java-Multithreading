@@ -1,22 +1,22 @@
 # Java Multithreading Tutorials — Master Index
 
-This folder contains complete learning material for **all 200 questions across 11 sections** in the [project README](../README.md), written for **Architects & Technical Leads**. Thread Fundamentals has an individual tutorial per question; sections 2–11 provide a complete, numbered answer guide for every question, with diagrams and review checklists. Runnable examples are linked where available under [`src/`](../src).
+This folder contains **one standalone tutorial for every question** — all **200 questions across 11 sections** in the [project README](../README.md) — written for **Architects & Technical Leads**. Section guides provide additional context, cross-cutting diagrams, and review checklists. Runnable examples are linked where available under [`src/`](../src). Mermaid diagrams are included throughout.
 
 ## Sections
 
-| # | Section | Questions | Tutorial guide | Status |
+| # | Section | Questions | Section guide and standalone tutorials | Status |
 | --- | --- | --- | --- | --- |
 | 1 | Thread Fundamentals | 1–20 | [Individual tutorials](1.%20Thread%20Fundamentals/) | **Complete** |
-| 2 | Synchronization and Locks | 21–40 | [Complete guide](2.%20Synchronization%20and%20Locks/README.md) | **Complete** |
-| 3 | Java Memory Model | 41–60 | [Complete guide](3.%20Java%20Memory%20Model/README.md) | **Complete** |
-| 4 | Concurrency Utilities | 61–80 | [Complete guide](4.%20Concurrency%20Utilities/README.md) | **Complete** |
-| 5 | Atomic Operations and Lock-Free | 81–100 | [Complete guide](5.%20Atomic%20Operations%20and%20Lock-Free/README.md) | **Complete** |
-| 6 | Concurrent Collections | 101–120 | [Complete guide](6.%20Concurrent%20Collections/README.md) | **Complete** |
-| 7 | Concurrency Patterns | 121–140 | [Complete guide](7.%20Concurrency%20Patterns/README.md) | **Complete** |
-| 8 | Performance and Debugging | 141–160 | [Complete guide](8.%20Performance%20and%20Debugging/README.md) | **Complete** |
-| 9 | Reactive and Modern Approaches | 161–180 | [Complete guide](9.%20Reactive%20and%20Modern%20Approaches/README.md) | **Complete** |
-| 10 | System Design Scenarios | 181–190 | [Complete guide](10.%20System%20Design%20Scenarios/README.md) | **Complete** |
-| 11 | Leadership and Review Skills | 191–200 | [Complete guide](11.%20Leadership%20and%20Review%20Skills/README.md) | **Complete** |
+| 2 | Synchronization and Locks | 21–40 | [Section guide](2.%20Synchronization%20and%20Locks/README.md) · [Tutorials](2.%20Synchronization%20and%20Locks/) | **Complete** |
+| 3 | Java Memory Model | 41–60 | [Section guide](3.%20Java%20Memory%20Model/README.md) · [Tutorials](3.%20Java%20Memory%20Model/) | **Complete** |
+| 4 | Concurrency Utilities | 61–80 | [Section guide](4.%20Concurrency%20Utilities/README.md) · [Tutorials](4.%20Concurrency%20Utilities/) | **Complete** |
+| 5 | Atomic Operations and Lock-Free | 81–100 | [Section guide](5.%20Atomic%20Operations%20and%20Lock-Free/README.md) · [Tutorials](5.%20Atomic%20Operations%20and%20Lock-Free/) | **Complete** |
+| 6 | Concurrent Collections | 101–120 | [Section guide](6.%20Concurrent%20Collections/README.md) · [Tutorials](6.%20Concurrent%20Collections/) | **Complete** |
+| 7 | Concurrency Patterns | 121–140 | [Section guide](7.%20Concurrency%20Patterns/README.md) · [Tutorials](7.%20Concurrency%20Patterns/) | **Complete** |
+| 8 | Performance and Debugging | 141–160 | [Section guide](8.%20Performance%20and%20Debugging/README.md) · [Tutorials](8.%20Performance%20and%20Debugging/) | **Complete** |
+| 9 | Reactive and Modern Approaches | 161–180 | [Section guide](9.%20Reactive%20and%20Modern%20Approaches/README.md) · [Tutorials](9.%20Reactive%20and%20Modern%20Approaches/) | **Complete** |
+| 10 | System Design Scenarios | 181–190 | [Section guide](10.%20System%20Design%20Scenarios/README.md) · [Tutorials](10.%20System%20Design%20Scenarios/) | **Complete** |
+| 11 | Leadership and Review Skills | 191–200 | [Section guide](11.%20Leadership%20and%20Review%20Skills/README.md) · [Tutorials](11.%20Leadership%20and%20Review%20Skills/) | **Complete** |
 
 ## Section 1 — Thread Fundamentals (individual tutorials)
 
