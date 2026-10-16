@@ -11,6 +11,24 @@
 This repository contains a comprehensive set of questions designed for mastering **Java Multithreading** at the **Architect / Technical Lead** level.  
 The sections are categorized to cover **fundamentals, advanced concepts, real-world scenarios, and leadership responsibilities**.
 
+## Complete tutorial guides
+
+All **200 questions** have corresponding answers in the tutorials. Start with the [master index](questions/00-INDEX.md); Sections 2–11 include detailed numbered answers, practical guidance, and Mermaid diagrams.
+
+| Section | Tutorial |
+| --- | --- |
+| 1. Thread Fundamentals | [20 individual tutorials](questions/1.%20Thread%20Fundamentals/) |
+| 2. Synchronization and Locks | [Complete guide](questions/2.%20Synchronization%20and%20Locks/README.md) |
+| 3. Java Memory Model | [Complete guide](questions/3.%20Java%20Memory%20Model/README.md) |
+| 4. Concurrency Utilities | [Complete guide](questions/4.%20Concurrency%20Utilities/README.md) |
+| 5. Atomic Operations and Lock-Free | [Complete guide](questions/5.%20Atomic%20Operations%20and%20Lock-Free/README.md) |
+| 6. Concurrent Collections | [Complete guide](questions/6.%20Concurrent%20Collections/README.md) |
+| 7. Concurrency Patterns | [Complete guide](questions/7.%20Concurrency%20Patterns/README.md) |
+| 8. Performance and Debugging | [Complete guide](questions/8.%20Performance%20and%20Debugging/README.md) |
+| 9. Reactive and Modern Approaches | [Complete guide](questions/9.%20Reactive%20and%20Modern%20Approaches/README.md) |
+| 10. System Design Scenarios | [Complete guide](questions/10.%20System%20Design%20Scenarios/README.md) |
+| 11. Leadership and Review Skills | [Complete guide](questions/11.%20Leadership%20and%20Review%20Skills/README.md) |
+
 
 ## 1. Thread Fundamentals 
 1. What are the possible thread states in Java?  

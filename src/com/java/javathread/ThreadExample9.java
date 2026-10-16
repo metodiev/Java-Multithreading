@@ -10,8 +10,8 @@ public class ThreadExample9 {
         };
 
         Thread  thread = new Thread(runnable);
-        thread.start();
         thread.setDaemon(true);
+        thread.start();
         sleep(3100);
     }
 
