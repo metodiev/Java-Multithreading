@@ -8,7 +8,9 @@ public class ThreadStatesDemo {
             synchronized (lock) {
                 try {
                     Thread.sleep(1500); // TIMED_WAITING
-                } catch (InterruptedException ignored) {}
+                } catch (InterruptedException e) {
+                    Thread.currentThread().interrupt();
+                }
             }
         }, "Holder");
 
@@ -21,7 +23,9 @@ public class ThreadStatesDemo {
         Thread sleeper = new Thread(() -> {
             try {
                 Thread.sleep(2000); // TIMED_WAITING
-            } catch (InterruptedException ignored) {}
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
         }, "Sleeper");
 
         // Show NEW state
@@ -44,4 +48,3 @@ public class ThreadStatesDemo {
         System.out.println("Final Holder state: " + holder.getState()); // TERMINATED
     }
 }
-

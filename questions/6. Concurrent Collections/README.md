@@ -2,7 +2,7 @@
 
 > Complete guide to questions 101–120 in the [master index](../00-INDEX.md). Prefer a collection whose consistency and ordering semantics match the use case.
 
-**Related code:** [`producerconsumer/App.java`](../../src/com/java/producerconsumer/App.java), [`countdownlatches/App.java`](../../src/com/java/countdownlatches/App.java).
+**Runnable demonstrations:** [`ConcurrentCollectionsDemo.java`](../../src/com/java/collections/ConcurrentCollectionsDemo.java), [`producerconsumer/App.java`](../../src/com/java/producerconsumer/App.java), [`countdownlatches/App.java`](../../src/com/java/countdownlatches/App.java).
 
 ## Answers
 

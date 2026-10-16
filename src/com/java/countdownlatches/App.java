@@ -19,10 +19,10 @@ class Processor implements Runnable {
 		try {
 			Thread.sleep(1000);
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			Thread.currentThread().interrupt();
+		} finally {
+			latch.countDown();
 		}
-		latch.countDown();
 	}
 
 }
@@ -37,11 +37,16 @@ public class App {
 		for (int i = 0; i < 3; i++) {
 			executor.submit(new Processor(latch));
 		}
+		executor.shutdown();
 		try {
 			latch.await();
+			if (!executor.awaitTermination(5, java.util.concurrent.TimeUnit.SECONDS)) {
+				executor.shutdownNow();
+				throw new IllegalStateException("Worker pool did not terminate");
+			}
 		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
+			executor.shutdownNow();
+			Thread.currentThread().interrupt();
 		}
 
 		System.out.println("Completed...");

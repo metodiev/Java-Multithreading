@@ -4,6 +4,8 @@
 
 **Related code:** [`Worker.java`](../../src/com/java/multiplelocks/synchronizedcodeblocks/Worker.java).
 
+**Runnable diagnostic demonstration:** [`DeadlockDetectionDemo.java`](../../src/com/java/performance/DeadlockDetectionDemo.java) intentionally creates a deadlock between daemon workers and detects it with `ThreadMXBean`; it exits after reporting the cycle.
+
 ## Answers
 
 ### 141. What is a deadlock?

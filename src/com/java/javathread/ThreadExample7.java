@@ -12,7 +12,8 @@ public class ThreadExample7 {
             try{
                 Thread.sleep(2000);
             }catch (InterruptedException e){
-                e.printStackTrace();
+                Thread.currentThread().interrupt();
+                return;
             }
 
             System.out.println(threadName + "finished");

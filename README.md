@@ -29,6 +29,14 @@ All **200 questions** have an individual tutorial, grouped by section, plus a co
 | 10. System Design Scenarios | [Section guide](questions/10.%20System%20Design%20Scenarios/README.md) · [Tutorials](questions/10.%20System%20Design%20Scenarios/) |
 | 11. Leadership and Review Skills | [Section guide](questions/11.%20Leadership%20and%20Review%20Skills/README.md) · [Tutorials](questions/11.%20Leadership%20and%20Review%20Skills/) |
 
+Runnable examples live under [`src/com/java/`](src/com/java/) and are mapped to tutorial topics in [`CODE_STRUCTURE.md`](CODE_STRUCTURE.md). The default source tree stays Java 8 compatible; the Java 21 virtual-thread example is isolated under [`src-modern/`](src-modern/).
+
+To compile the Java 8 sources and run the finite demonstrations, use:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts\verify-examples.ps1
+```
+
 
 ## 1. Thread Fundamentals 
 1. What are the possible thread states in Java?  

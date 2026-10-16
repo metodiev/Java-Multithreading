@@ -8,7 +8,9 @@ public class DaemonExample {
                 System.out.println("User thread started");
                 Thread.sleep(2000); // Simulate work
                 System.out.println("User thread finished");
-            } catch (InterruptedException ignored) {}
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
         }, "UserThread");
 
         Thread daemonThread = new Thread(() -> {
@@ -17,7 +19,9 @@ public class DaemonExample {
                     System.out.println("Daemon thread running...");
                     Thread.sleep(500);
                 }
-            } catch (InterruptedException ignored) {}
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
         }, "DaemonThread");
 
         // Set daemon before starting
@@ -25,22 +29,7 @@ public class DaemonExample {
 
         userThread.start();
         daemonThread.start();
-        Thread.sleep(4000);
-        System.out.println("Daemon thread after sleep " + daemonThread.getState());
         userThread.join();
         System.out.println("Main thread exits; daemon will stop if running");
-        printExampleUsage();
-    }
-
-    public static void printExampleUsage(){
-        while(true){
-            System.out.println("The other part of the program will be executed");
-            try {
-                Thread.sleep(3000);
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
-        }
     }
 }
-

@@ -2,6 +2,8 @@
 
 > Complete guide to questions 181–190 in the [master index](../00-INDEX.md). Start with workload, correctness, and failure requirements; concurrency primitives are implementation details of the design.
 
+**Runnable JDK demonstrations:** [`BoundedPipelineDemo.java`](../../src/com/java/systemdesign/BoundedPipelineDemo.java) illustrates bounded work admission; [`CircuitBreakerDemo.java`](../../src/com/java/systemdesign/CircuitBreakerDemo.java) demonstrates closed/open/half-open transitions; [`ResiliencePatternsDemo.java`](../../src/com/java/systemdesign/ResiliencePatternsDemo.java) shows bounded retries, timeout-triggered cancellation, and a refilling token bucket. Redis and ZooKeeper coordination need service-backed integration tests and are not simulated by these examples.
+
 ## Answers
 
 ### 181. Design a high-throughput Java data pipeline

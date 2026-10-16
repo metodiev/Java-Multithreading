@@ -2,6 +2,8 @@
 
 > Complete guide to questions 161–180 in the [master index](../00-INDEX.md). Reactive libraries, virtual threads, and structured concurrency are complementary choices, not interchangeable labels.
 
+**Runnable JDK demonstrations:** [`CompletableFuturePipelineDemo.java`](../../src/com/java/modern/CompletableFuturePipelineDemo.java) uses Java 8 APIs; [`VirtualThreadsDemo.java`](../../src-modern/com/java/modern/VirtualThreadsDemo.java) requires JDK 21+. Reactor and RxJava examples require an external dependency and are intentionally not placed in the dependency-free source tree.
+
 ## Answers
 
 ### 161. What are parallel streams?

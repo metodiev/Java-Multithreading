@@ -9,12 +9,12 @@ public class App {
 		count++;
 	}
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		App app = new App();
 		app.doWork();
 	}
 	
-	public void doWork(){
+	public void doWork() throws InterruptedException {
 		Thread t1 = new Thread(new Runnable(){
 			@Override
 			public void run() {
@@ -35,15 +35,13 @@ public class App {
 		
 		t1.start();
 		t2.start();
-		try {
-			t1.join();
-			t2.join();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+		t1.join();
+		t2.join();
 		
 		System.out.println("Count is:" + count);
+		if (count != 20000) {
+			throw new AssertionError("Synchronized counter lost updates: " + count);
+		}
 	}
 
 }

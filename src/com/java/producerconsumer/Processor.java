@@ -1,30 +1,24 @@
 package com.java.producerconsumer;
 
-import java.util.Scanner;
+public final class Processor {
+    private int value;
+    private boolean available;
 
-public class Processor {
-	
-	public void produce() throws InterruptedException{
-		synchronized (this) {
-			System.out.println("Producer thread running ...");
-			wait();
-			System.out.println("rESUMEND");
-			
-		}
-	}
-	
-	public void consume() throws InterruptedException{
-		
-		Scanner sc = new Scanner(System.in);
-		Thread.sleep(2000);
-		
-		synchronized (this) {
-			System.out.println("Waiting for return key");
-			sc.nextLine();
-			System.out.println("Return key pressed ");
-			notify();
-		Thread.sleep(5000);	
-		}
-	}
+    public synchronized void produce(int nextValue) throws InterruptedException {
+        while (available) {
+            wait();
+        }
+        value = nextValue;
+        available = true;
+        notifyAll();
+    }
 
+    public synchronized int consume() throws InterruptedException {
+        while (!available) {
+            wait();
+        }
+        available = false;
+        notifyAll();
+        return value;
+    }
 }

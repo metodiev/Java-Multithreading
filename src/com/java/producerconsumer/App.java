@@ -1,73 +1,84 @@
 package com.java.producerconsumer;
 
-import java.util.Random;
 import java.util.concurrent.ArrayBlockingQueue;
 import java.util.concurrent.BlockingQueue;
+import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
+import java.util.concurrent.TimeUnit;
 
-public class App {
+public final class App {
+    private static final int ITEM_COUNT = 20;
+    private static final int STOP = -1;
 
-	private static BlockingQueue<Integer> queue = new ArrayBlockingQueue<Integer>(10);
+    private App() {
+    }
 
-	public static void main(String[] args) {
-		Thread t1 = new Thread(new Runnable() {
+    public static void main(String[] args) {
+        BlockingQueue<Integer> queue = new ArrayBlockingQueue<Integer>(4);
+        ExecutorService workers = Executors.newFixedThreadPool(2);
+        workers.execute(() -> produce(queue));
+        workers.execute(() -> consume(queue));
+        workers.shutdown();
 
-			@Override
-			public void run() {
+        try {
+            if (!workers.awaitTermination(10, TimeUnit.SECONDS)) {
+                workers.shutdownNow();
+                throw new IllegalStateException("Producer-consumer demo did not terminate");
+            }
+            runMonitorHandoff();
+        } catch (InterruptedException e) {
+            workers.shutdownNow();
+            Thread.currentThread().interrupt();
+        }
+    }
 
-				try {
-					producer();
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			}
-		});
+    private static void runMonitorHandoff() throws InterruptedException {
+        Processor handoff = new Processor();
+        Thread producer = new Thread(() -> {
+            try {
+                handoff.produce(42);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+        }, "monitor-producer");
+        Thread consumer = new Thread(() -> {
+            try {
+                System.out.println("Monitor consumer received: " + handoff.consume());
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
+        }, "monitor-consumer");
 
-		Thread t2 = new Thread(new Runnable() {
+        producer.start();
+        consumer.start();
+        producer.join();
+        consumer.join();
+    }
 
-			@Override
-			public void run() {
+    private static void produce(BlockingQueue<Integer> queue) {
+        try {
+            for (int value = 0; value < ITEM_COUNT; value++) {
+                queue.put(value);
+                System.out.println("Produced: " + value);
+            }
+            queue.put(STOP);
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+    }
 
-				try {
-					consumer();
-				} catch (InterruptedException e) {
-					// TODO Auto-generated catch block
-					e.printStackTrace();
-				}
-			}
-		});
-		
-		t1.start();
-		t2.start();
-		
-		try {
-			t1.join();
-			t2.join();
-		} catch (InterruptedException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-
-	private static void producer() throws InterruptedException {
-		Random random = new Random();
-
-		while (true) {
-			queue.put(random.nextInt(100));
-		}
-	}
-
-	private static void consumer() throws InterruptedException {
-		Random random = new Random();
-
-		while (true) {
-			Thread.sleep(100);
-
-			if (random.nextInt(10) == 0) {
-				Integer value = queue.take();
-
-				System.out.println("Taken value:" + value + "; Queue suze is " + queue.size());
-			}
-		}
-	}
+    private static void consume(BlockingQueue<Integer> queue) {
+        try {
+            while (true) {
+                int value = queue.take();
+                if (value == STOP) {
+                    System.out.println("Consumer received stop signal");
+                    return;
+                }
+                System.out.println("Consumed: " + value);
+            }
+        } catch (InterruptedException e) {
+            Thread.currentThread().interrupt();
+        }
+    }
 }

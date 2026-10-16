@@ -9,13 +9,21 @@ public class ThreadGroupExample {
         // Thread 1 in the group
         Thread t1 = new Thread(group, () -> {
             System.out.println(Thread.currentThread().getName() + " running");
-            try { Thread.sleep(1000); } catch (InterruptedException ignored) {}
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
         }, "Thread-1");
 
         // Thread 2 in the group
         Thread t2 = new Thread(group, () -> {
             System.out.println(Thread.currentThread().getName() + " running");
-            try { Thread.sleep(1000); } catch (InterruptedException ignored) {}
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
         }, "Thread-2");
 
         // Start threads
@@ -36,4 +44,3 @@ public class ThreadGroupExample {
         group.interrupt();
     }
 }
-

@@ -7,21 +7,16 @@ public class InterruptDemo {
             while (!Thread.currentThread().isInterrupted()) {
                 System.out.println("Worker running...");
                 try {
-                    //Thread.sleep(500); // may throw InterruptedException
-                    System.out.println("Worker ");
-                }catch (Exception ex){
-                    ex.printStackTrace();
+                    Thread.sleep(200);
+                } catch (InterruptedException e) {
+                    Thread.currentThread().interrupt();
                 }
-//                catch (InterruptedException e) {
-//                    System.out.println("Worker interrupted during sleep");
-//                    Thread.currentThread().interrupt(); // preserve interrupted status
-//                }
             }
             System.out.println("Worker exiting gracefully");
         });
 
         worker.start();
-        Thread.sleep(1600); // worker run for some time
+        Thread.sleep(600); // worker run for some time
         worker.interrupt();
         worker.join();
 

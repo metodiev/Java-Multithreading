@@ -4,6 +4,8 @@
 
 **Related code:** [`producerconsumer`](../../src/com/java/producerconsumer/), [`javasynchronize`](../../src/com/java/javasynchronize/).
 
+**Runnable demonstrations:** [`ActorMessagePassingDemo.java`](../../src/com/java/patterns/ActorMessagePassingDemo.java) shows a bounded mailbox and single-owner state; [`BoundedPipelineDemo.java`](../../src/com/java/systemdesign/BoundedPipelineDemo.java) shows bounded admission with caller-runs feedback.
+
 ## Answers
 
 ### 121. What is Producer-Consumer?

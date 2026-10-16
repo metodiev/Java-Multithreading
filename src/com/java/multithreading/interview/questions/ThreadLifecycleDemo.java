@@ -6,7 +6,7 @@ public class ThreadLifecycleDemo {
             try {
                 Thread.sleep(1000); // TIMED_WAITING
             } catch (InterruptedException e) {
-                e.printStackTrace();
+                Thread.currentThread().interrupt();
             }
         });
 

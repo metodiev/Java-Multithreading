@@ -12,19 +12,16 @@ public class ThreadExample8 {
             return this.stopRequested;
         }
 
-        private void sleep(long millis) {
-            try {
-                Thread.sleep(millis);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
-        }
-
         @Override
         public void run() {
             System.out.println("StoppableRunnable Running");
             while (!isStopRequested()) {
-                sleep(1000);
+                try {
+                    Thread.sleep(1000);
+                } catch (InterruptedException e) {
+                    Thread.currentThread().interrupt();
+                    break;
+                }
                 System.out.println("...");
             }
             System.out.println("StoppableRunnable Stopped");
@@ -36,14 +33,29 @@ public class ThreadExample8 {
         Thread thread = new Thread(stoppableRunnable, "The Thread");
         thread.start();
 
+        boolean interrupted = false;
         try {
-            Thread.sleep(5000);
+            Thread.sleep(1000);
         } catch (InterruptedException e) {
-            e.printStackTrace();
+            interrupted = true;
+        } finally {
+            stoppableRunnable.requestStop();
+            thread.interrupt();
         }
 
         System.out.println("requesting stop");
-        stoppableRunnable.requestStop();
+        while (thread.isAlive()) {
+            try {
+                thread.join();
+            } catch (InterruptedException e) {
+                interrupted = true;
+                stoppableRunnable.requestStop();
+                thread.interrupt();
+            }
+        }
         System.out.println("stop requested");
+        if (interrupted) {
+            Thread.currentThread().interrupt();
+        }
     }
 }

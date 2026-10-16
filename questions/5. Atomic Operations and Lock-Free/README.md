@@ -2,6 +2,8 @@
 
 > Complete guide to questions 81–100 in the [master index](../00-INDEX.md). Java 8 atomic classes are available at the project's baseline; `VarHandle` requires Java 9 or later.
 
+**Runnable demonstration:** [`AtomicOperationsDemo.java`](../../src/com/java/atomic/AtomicOperationsDemo.java) exercises exact atomic counting, aggregate counting, and stamped-reference ABA detection.
+
 ## Answers
 
 ### 81. What is CAS?

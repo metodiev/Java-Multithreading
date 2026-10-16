@@ -5,7 +5,7 @@ import java.util.Scanner;
 class Processor extends Thread {
 
 	private volatile boolean running = true;
-	private volatile int count = 0;
+	private int count = 0;
 
 	public void run() {
 		while (running) {
@@ -14,11 +14,9 @@ class Processor extends Thread {
 			
 			try {
 				Thread.sleep(1000);
-				
-				
 			} catch (InterruptedException e) {
-				// TODO Auto-generated catch block
-				e.printStackTrace();
+				Thread.currentThread().interrupt();
+				break;
 			}
 			System.out.println(count);
 		}
@@ -27,12 +25,13 @@ class Processor extends Thread {
 
 	public void shutdown() {
 		running = false;
+		interrupt();
 	}
 }
 
 public class App {
 
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException {
 		Processor process = new Processor();
 		process.start();
 
@@ -47,7 +46,11 @@ public class App {
 		input.nextLine();
 
 		process.shutdown();
-		
+		process1.shutdown();
+		process2.shutdown();
+		process.join();
+		process1.join();
+		process2.join();
 
 	}
 

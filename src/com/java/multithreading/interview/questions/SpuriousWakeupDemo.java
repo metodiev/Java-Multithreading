@@ -24,7 +24,12 @@ public class SpuriousWakeupDemo {
         });
 
         Thread signalingThread = new Thread(() -> {
-            try { Thread.sleep(1000); } catch (InterruptedException ignored) {}
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+                return;
+            }
             lock.lock();
             try {
                 ready = true;
@@ -42,4 +47,3 @@ public class SpuriousWakeupDemo {
         signalingThread.join();
     }
 }
-

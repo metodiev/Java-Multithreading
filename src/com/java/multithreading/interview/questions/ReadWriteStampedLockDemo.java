@@ -16,7 +16,9 @@ public class ReadWriteStampedLockDemo {
             try {
                 System.out.println("Reader1 (ReadWriteLock) reads: " + sharedData);
                 Thread.sleep(500);
-            } catch (InterruptedException ignored) {}
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
             finally { rwLock.readLock().unlock(); }
         });
 
@@ -26,7 +28,9 @@ public class ReadWriteStampedLockDemo {
                 sharedData++;
                 System.out.println("Writer1 (ReadWriteLock) writes: " + sharedData);
                 Thread.sleep(500);
-            } catch (InterruptedException ignored) {}
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
             finally { rwLock.writeLock().unlock(); }
         });
 
@@ -39,7 +43,11 @@ public class ReadWriteStampedLockDemo {
         Thread reader2 = new Thread(() -> {
             long stamp = stampedLock.tryOptimisticRead();
             int data = sharedData;
-            try { Thread.sleep(200); } catch (InterruptedException ignored) {}
+            try {
+                Thread.sleep(200);
+            } catch (InterruptedException e) {
+                Thread.currentThread().interrupt();
+            }
             if (!stampedLock.validate(stamp)) {
                 stamp = stampedLock.readLock();
                 try { data = sharedData; } finally { stampedLock.unlockRead(stamp); }
